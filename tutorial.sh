@@ -16,7 +16,7 @@
 # --- current directory ---
 # pwd
 
-# --- create a bash script ---
+# --- how to create a bash script? ---
 # create a file with the extension .sh
 # inside the file, add -->    #!/bin/bash
 # "#!/bin/bash" is called shebang. # bash  ! bang  
@@ -90,8 +90,6 @@
 
 #!/bin/sh
 
-
-
 #--- variables ---
 echo "===== VARIABLES ====="
 VARIABLE="Variable"
@@ -127,7 +125,15 @@ echo "===== WHILE LOOP ====="
 i=0
 while [[ $i -le $NUMBER_2 ]] ; do
     echo "$i"
-    (( i += 1 ))
+    i=`expr $i + 1`
 done
 
-# case
+# function
+Sum() {
+    return `expr $1 + $2`
+}
+
+Sum 5 32
+
+soma=$?
+echo "The sum between $1 and $2 = $soma"
