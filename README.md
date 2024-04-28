@@ -1,1 +1,1 @@
-# linux-batch-script
+This is a tutorial on batch script
